@@ -41,6 +41,4 @@ form.addEventListener("submit", (e) => {
 
   //   resultPanel.setAttribute("class", "result py-4 bg-light text-center");
   resultPanel.classList.remove("d-none");
-
-  console.log(score);
 });
