@@ -2,8 +2,11 @@ const correctAnswers = ["B", "A", "B", "A", "A"];
 const form = document.querySelector(".quiz-form");
 const resultPanel = document.querySelector(".result");
 const scoreTable = resultPanel.querySelector("span");
+const qs = document.querySelectorAll("form > div > p");
 
 form.addEventListener("submit", (e) => {
+  qs.forEach((q) => (q.className = ""));
+
   e.preventDefault();
 
   let score = 0;
@@ -21,7 +24,7 @@ form.addEventListener("submit", (e) => {
   userAnswers.forEach((answer, index) => {
     if (answer === correctAnswers[index]) {
       score += 20;
-    }
+    } else qs[index].className = "text-danger";
   });
 
   // Display Score
