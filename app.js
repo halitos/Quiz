@@ -37,7 +37,7 @@ form.addEventListener("submit", (e) => {
     } else {
       counter++;
     }
-  }, 20);
+  }, 15);
 
   //   resultPanel.setAttribute("class", "result py-4 bg-light text-center");
   resultPanel.classList.remove("d-none");
